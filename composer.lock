@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c8eee0878b0852c6d5651b334b36d7f",
-    "content-hash": "601fb31c8d0d4504a213a0c837654da4",
+    "hash": "fbcac4ac025ab9a1405c10c0e513a9e0",
+    "content-hash": "58978a6aaf8760b503bc5b2cac509706",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -396,6 +396,50 @@
                 "php mobile detect"
             ],
             "time": "2016-04-24 09:47:16"
+        },
+        {
+            "name": "pgbi/cakephp3-soft-delete",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PGBI/cakephp3-soft-delete.git",
+                "reference": "3326dc72af78f1d87117f0ad13666d10b8d1a5bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PGBI/cakephp3-soft-delete/zipball/3326dc72af78f1d87117f0ad13666d10b8d1a5bd",
+                "reference": "3326dc72af78f1d87117f0ad13666d10b8d1a5bd",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "cakephp/plugin-installer": "*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "SoftDelete\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "SoftDelete plugin for CakePHP",
+            "homepage": "https://github.com/pgbi/cakephp3-soft-delete",
+            "keywords": [
+                "cakephp",
+                "cakephp 3",
+                "deletable",
+                "delete",
+                "plugin",
+                "soft"
+            ],
+            "time": "2015-10-18 01:46:04"
         },
         {
             "name": "psr/log",
@@ -1230,6 +1274,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "cakephp/migrations": 0,
         "psy/psysh": 0
     },
     "prefer-stable": true,
