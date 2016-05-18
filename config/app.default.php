@@ -1,4 +1,17 @@
 <?php
+if (!defined('RDS_HOSTNAME')) {
+    if (!empty($_SERVER['RDS_HOSTNAME'])) {
+        define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
+        define('RDS_USERNAME', $_SERVER['RDS_USERNAME']);
+        define('RDS_PASSWORD', $_SERVER['RDS_PASSWORD']);
+        define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
+    } else {
+        define('RDS_HOSTNAME', 'localhost');
+        define('RDS_USERNAME', 'postgres');
+        define('RDS_PASSWORD', 'secret');
+        define('RDS_DB_NAME', 'vipolis');
+    }
+}
 return [
     /**
      * Debug Level:
@@ -219,16 +232,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => 'localhost',
+            'host' => RDS_HOSTNAME,
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'my_app',
+            'username' => RDS_USERNAME,
+            'password' => RDS_PASSWORD,
+            'database' => RDS_DB_NAME,
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
